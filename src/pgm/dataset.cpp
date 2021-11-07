@@ -17,7 +17,7 @@ Dataset::Proxy::operator std::string() const
     return dataset_->get(name_, index_);
 }
 
-bool Dataset::Proxy::operator ==(const std::string &other)
+bool Dataset::Proxy::operator ==(const std::string &other) const
 {
     return dataset_->get(name_, index_) == other;
 }

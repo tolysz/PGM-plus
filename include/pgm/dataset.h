@@ -18,9 +18,9 @@ class Dataset
 
         Proxy(Dataset *dataset, const std::string &name, std::size_t index);
         void operator = (const std::string &value);
-        operator std::string() const;
+        explicit operator std::string() const;
 
-        bool operator ==(const std::string &other);
+        bool operator ==(const std::string &other) const;
     };
     
 public:
