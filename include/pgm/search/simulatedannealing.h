@@ -2,6 +2,7 @@
 #define PGM_SIMULATEDANNEALING_H
 
 #include <functional>
+#include <string>
 
 namespace pgm {
 
