@@ -1,4 +1,4 @@
-#include <catch.hpp>
+#include <catch2/catch.hpp>
 #include <pgm/bayesnet.h>
 #include "test_utility.h"
 

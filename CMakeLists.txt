@@ -17,6 +17,8 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
+add_compile_options(-fpermissive)
+
 set (HEADERS
     ${PROJECT_SOURCE_DIR}/include/pgm/pgm.h
     ${PROJECT_SOURCE_DIR}/include/pgm/variable.h
@@ -71,7 +73,9 @@ target_link_libraries (sandbox ${PROJECT_NAME})
 ExternalProject_Add(
     catch
     PREFIX ${CMAKE_BINARY_DIR}/catch
-    GIT_REPOSITORY https://github.com/philsquared/Catch.git
+    #GIT_REPOSITORY https://github.com/philsquared/Catch.git
+    GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+    GIT_TAG v2.x
     TIMEOUT 10
     UPDATE_COMMAND ${GIT_EXECUTABLE} pull
     CONFIGURE_COMMAND ""
